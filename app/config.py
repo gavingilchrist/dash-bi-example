@@ -12,5 +12,10 @@ config = {
             'name': 'Example Page',
             'desc': 'Select a US State, see the 10 nearest states',
         },
+        {
+            'id': 'example_page_2',
+            'name': 'Example Page again',
+            'desc': 'Copy of Example Page for experimenting with page size detection',
+        },
     ],
 }

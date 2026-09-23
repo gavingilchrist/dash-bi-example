@@ -1,1 +1,1 @@
-# dash-template
+# dash-bi-example
