@@ -32,7 +32,6 @@ layout = html.Div(
                      'left': '0px',
                      'bottom': '0px'},
               body_cell_style={'text-overflow': 'ellipsis'}),
-        dcc.Store(id='window_dimensions'),
         html.Div(id='display_dimensions', 
                  children='Testing, testing',
                  style={'position': 'absolute',
