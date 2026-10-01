@@ -23,7 +23,7 @@ layout = html.Div(
                      style={'position': 'absolute',
                             'top': '0px',
                             'left': '48px',
-                            'width': '512px',
+                            'width': 'min(calc(100% - 48px), 512px)',
                             'color': '#131417',
                             '--Dash-Fill-Interactive-Strong': '#02808A'}),
         table('closest_states_table',
