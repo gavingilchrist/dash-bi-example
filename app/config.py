@@ -17,5 +17,10 @@ config = {
             'name': 'Example Page again',
             'desc': 'Copy of Example Page for experimenting with page size detection',
         },
+        {
+            'id': 'digits_solver',
+            'name': 'Digits Solver',
+            'desc': 'Solve NYT Digits/Nerdle Targets puzzles',
+        },
     ],
 }
