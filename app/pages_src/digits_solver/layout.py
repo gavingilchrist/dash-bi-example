@@ -1,0 +1,75 @@
+from dash import dcc, html
+import dash_bootstrap_components as dbc
+from dashblox.components import table
+
+
+solutions_table_cols = [
+    ('solutions', {'label': 'Solutions', 'width': 500}),
+]
+
+
+layout = html.Div(
+    [
+        html.H6(children='Enter starting numbers:',
+                style={'position': 'absolute',
+                       'top': '8px',
+                       'left': '0px',
+                       'font-family': ['Arial', 'sans-serif']}),
+        dcc.Input(id='starting_numbers_input',
+                  type='text',
+                  placeholder='e.g. 4,5,7,21,22,25',
+                  debounce=True,
+                  autoFocus=True,
+                  autoComplete='off',
+                  style={'position': 'absolute',
+                         'top': '0px',
+                         'left': '180px',
+                         'width': 'min(calc(100% - 180px), 512px)',
+                         '--Dash-Fill-Interactive-Strong': '#02808A'}),
+        html.H6(children='Enter target number:',
+                style={'position': 'absolute',
+                       'top': '68px',
+                       'left': '0px',
+                       'font-family': ['Arial', 'sans-serif']}),
+        dcc.Input(id='target_number_input',
+                  type='text',
+                  placeholder='e.g. 470',
+                  debounce=True,
+                  autoComplete='off',
+                  style={'position': 'absolute',
+                         'top': '60px',
+                         'left': '180px',
+                         'width': 'min(calc(100% - 180px), 512px)',
+                         '--Dash-Fill-Interactive-Strong': '#02808A'}),
+        html.H6(children='Solution format:',
+                style={'position': 'absolute',
+                       'top': '128px',
+                       'left': '0px',
+                       'font-family': ['Arial', 'sans-serif']}),
+        dcc.RadioItems(id='format_select',
+                       options=['NYT Digits', 'Nerdle Targets'], 
+                       value='NYT Digits', 
+                       inline=True,
+                       style={'position': 'absolute',
+                              'top': '120px',
+                              'left': '180px',
+                              'width': 'min(calc(100% - 180px), 260px)',
+                              '--Dash-Fill-Interactive-Strong': '#02808A'}),
+        table('solutions_table',
+              solutions_table_cols,
+              style={'top': '180px',
+                     'left': '0px',
+                     'bottom': '0px'},
+              body_cell_style={
+                     'whiteSpace': 'normal',
+                     }),
+    ],
+    style={'position': 'absolute',
+           'top': '0px',
+           'bottom': '0px',
+           'left': '0px',
+           'right': '0px',
+           'text-align': 'left',
+           'background-color': '#FFFFFF',
+    }
+)
