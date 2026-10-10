@@ -9,6 +9,6 @@ def update_layout_from_size(self):
     wdims = self.app_state['_window_dimensions.data']
     if wdims is not None:
         d = wdims.iloc[0].to_dict()
-        device_type = 'Desktop' if d['width'] > 992 else 'Mobile/Tablet'
-        dtxt = f"Current Window: {d['width']}px width × {d['height']}px height ({device_type})"
+        device_type = 'Desktop' if int(d['width'][:-2]) > 992 else 'Mobile/Tablet'
+        dtxt = f"Current Window: {d['width']} width × {d['height']} height ({device_type})"
         self.app_state['display_dimensions.children'] = dtxt

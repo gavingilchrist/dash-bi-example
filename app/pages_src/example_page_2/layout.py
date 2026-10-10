@@ -2,13 +2,11 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dashblox.components import table
 
-
 closest_states_table_cols = [
     ('state_code', {'label': 'Abbrev.', 'width': 80}),
     ('state_name', {'label': 'State', 'width': 160}),
     ('dist', {'label': 'Distance', 'width': 80, 'num_fmt': 'number-0'}),
 ]
-
 
 layout = html.Div(
     [
