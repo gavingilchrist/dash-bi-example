@@ -3,8 +3,8 @@ config = {
         'title': 'Luna Does Stuff',
         'navbar_img': 'assets/navbar.png',
         'home_link_img': 'assets/luna_logo_teal.png',
-        'rhs_link_img': 'assets/luna_logo_teal.png',
-        'rhs_link_target': 'https://www.google.com',
+        #'rhs_link_img': 'assets/luna_logo_teal.png',
+        #'rhs_link_target': 'https://www.google.com',
     },
     'pages': [
         {
